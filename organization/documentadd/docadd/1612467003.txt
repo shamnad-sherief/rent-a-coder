@@ -1,0 +1,15 @@
+The MSER algorithm has been used in text detection by Chen by combining MSER with Canny edges.
+ Canny edges are used to help cope with the weakness of MSER to blur. 
+MSER is first applied to the image in question to determine the character regions.
+ To enhance the MSER regions any pixels outside the boundaries formed by Canny edges are removed. 
+The separation of the later provided by the edges greatly increase the usability of MSER in the extraction of blurred text.
+[8] An alternative use of MSER in text detection is the work by Shi using a graph model.
+ This method again applies MSER to the image to generate preliminary regions. 
+These are then used to construct a graph model based on the position distance and color distance between each MSER, which is treated as a node. 
+Next the nodes are separated into foreground and background using cost functions. 
+One cost function is to relate the distance from the node to the foreground and background. 
+The other penalizes nodes for being significantly different from its neighbor. 
+When these are minimized the graph is then cut to separate the text nodes from the non-text nodes.
+[9] To enable text detection in a general scene, Neumann uses the MSER algorithm in a variety of projections.
+ In addition to the greyscale intensity projection, he uses the red, blue, and green color channels to detect text regions that are color distinct but not necessarily distinct in greyscale intensity.
+ 
