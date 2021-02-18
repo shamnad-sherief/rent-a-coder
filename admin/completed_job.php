@@ -1,7 +1,7 @@
 <?php
 //session_start();
 require_once('header.php'); 
-require_once('../ConnectionClass.php');
+require_once('../connectionclass.php');
 $obj=new ConnectionClass();
 $qry1="select * from free_reg f inner join login l inner join request r on r.femail=l.username and l.status='active' and l.usertype='Freelancer' and r.femail=f.email and r.status='Completed' order by r.req_id desc";
     $result=$obj->GetTable($qry1);
