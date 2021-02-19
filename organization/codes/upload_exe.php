@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../../ConnectionClass.php');
+require_once('../../connectionclass.php');
 $obj=new ConnectionClass();
 $page_action=$_REQUEST['action'];
 //echo $page_action;
@@ -38,7 +38,7 @@ $page_action=$_REQUEST['action'];
       
       	if($exeupdate['Status']=='true')
       	{
-      		echo $obj->alert("Successfully Updated","../jobview.php?rid=".$baid);
+      		//echo $obj->alert("Successfully Updated","../jobview.php?rid=".$baid);
       	}
       	else
       	{

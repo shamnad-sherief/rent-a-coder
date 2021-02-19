@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../../ConnectionClass.php');
+require_once('../../connectionclass.php');
 $obj=new ConnectionClass();
 $page_action=$_REQUEST['action'];
 $uname=$_SESSION['email'];

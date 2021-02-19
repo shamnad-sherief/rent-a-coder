@@ -1,7 +1,7 @@
 <?php
 //session_start();
 require_once('header.php'); 
-require_once("../ConnectionClass.php");
+require_once("../connectionclass.php");
 $obj=new ConnectionClass();
 $jobrid=$_REQUEST['rid'];
 $qry="select * from job_post j inner join org_reg r on r.email=j.comp_mail  where j.status='active' and j.job_id='$jobrid'";

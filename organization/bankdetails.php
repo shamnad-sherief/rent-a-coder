@@ -1,7 +1,7 @@
 <?php 
 //session_start();
 require_once('header.php');
-require_once('../ConnectionClass.php');
+require_once('../connectionclass.php');
 $obj=new ConnectionClass();
 $jid=$_REQUEST['job_id'];
 $email=$_SESSION['email'];

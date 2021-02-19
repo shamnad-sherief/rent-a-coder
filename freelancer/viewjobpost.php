@@ -1,7 +1,7 @@
 <?php
 //session_start();
  require_once('header.php'); 
-require_once("../ConnectionClass.php");
+require_once("../connectionclass.php");
 $obj=new ConnectionClass();
 $qry="select * from job_post j inner join org_reg r on r.email=j.comp_mail and j.free_type='Freelancer'   where j.status='active'";
 $result=$obj->GetTable($qry);

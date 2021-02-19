@@ -46,7 +46,7 @@ $name=$obj->GetSingleData($qry);
                 <span class="middle"></span>
                 <span class="bottom"></span>
               </div>
-                <a href="index.html" class="navbar-brand"> 
+                <a href="index.php" class="navbar-brand"> 
                  <b>RAC</b>
                 </a>
 

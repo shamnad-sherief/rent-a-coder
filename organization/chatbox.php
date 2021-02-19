@@ -1,7 +1,7 @@
 <?php
 ///session_start(); 
 require_once('header.php'); 
-require_once('../ConnectionClass.php');
+require_once('../connectionclass.php');
 $obj=new ConnectionClass();
 $uname=$_SESSION['email'];
     $qry2="select * from free_reg f inner join request r on f.email=r.femail where r.oemail='$uname'  ";

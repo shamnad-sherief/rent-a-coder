@@ -18,6 +18,9 @@
 		<div class="w3l-copy text-center">
 			<p>© 2021 RENT A CODER. All rights reserved | Developed by Team Rent a Coder</p>
 			</p>
+			</div>
+			<div class="w3l-copy text-left">
+			<p><align=left>Contact Us</align></p>
 		</div>
 		<!-- //copyright -->
 	</div>
