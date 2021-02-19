@@ -26,7 +26,8 @@ $page_action=$_REQUEST['action'];
       $imgpath="../document/doc/";
       $img_path=str_replace("\\","/",$imgpath);    
      
-      $extension=end(explode(".",$file));
+      $tmp=explode('.', $file);
+      $extension=end($tmp);
       $files=time().".".$extension;
       try
       {
@@ -38,7 +39,7 @@ $page_action=$_REQUEST['action'];
       
       	if($exeupdate['Status']=='true')
       	{
-      		//echo $obj->alert("Successfully Updated","../jobview.php?rid=".$baid);
+      		echo $obj->alert("Successfully Updated","../jobview.php?rid=".$baid);
       	}
       	else
       	{

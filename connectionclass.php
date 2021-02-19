@@ -4,7 +4,7 @@ class ConnectionClass
 public $db=null;
 public function open()
 {
-$this->db=mysqli_connect('localhost','root','','rent_a_coder') or die('Error connecting to Mysql server');
+$this->db=mysqli_connect('localhost','root','','rent_a_coder') or die('Error: ' . mysqli_error($myConnection));
 	}
 //==================INSERT DELETE UPDATE================
 	public function Manipulation($qry)
@@ -72,7 +72,7 @@ public function GetSingleData($qry)
 			 }
 			 else
 			 {
-			     throw new Exception(mysql_error());
+			     throw new Exception(mysqli_error($this->db));
 			 }
     }
 	catch(Exception $e)

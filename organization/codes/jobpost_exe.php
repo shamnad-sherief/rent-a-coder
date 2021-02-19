@@ -37,7 +37,8 @@ $files=$_FILES['file']['name'];
 //echo $files."<br>";
 $imgpath="../document/doc/";
 $img_path=str_replace("\\","/",$imgpath);
-$extension=end(explode(".",$files));
+$tmp=explode('.', $files);
+$extension=end($tmp);
 /*$expl=explode(".",$files);
 $extension=end($expl);	*/
 $files1=time()."b.".$extension;
