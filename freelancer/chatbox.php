@@ -1,7 +1,7 @@
 <?php
 //session_start(); 
 require_once('header.php'); 
-require_once('../ConnectionClass.php');
+require_once('../connectionclass.php');
 $obj=new ConnectionClass();
 $uname=$_SESSION['email'];
 $qry="select * from chatbox c inner join org_reg r inner join free_reg fr on fr.fid=c.fid and r.oid=c.oid where fr.email='$uname'";

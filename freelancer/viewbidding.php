@@ -1,7 +1,7 @@
 <?php
 //session_start();
 require_once('header.php'); 
-require_once("../ConnectionClass.php");
+require_once("../connectionclass.php");
 $obj=new ConnectionClass();
 $uname=$_SESSION['email'];
 $jid=$_REQUEST['job_id'];
@@ -33,7 +33,7 @@ $result=$obj->GetTable($qry);
             <th data-breakpoints="xs">ID</th>
             <th>Amount</th>
             <th>Status</th>
-            <th>Prograss</th>
+            <th>Progress</th>
         </thead>
         <tbody>
             <?php
@@ -52,11 +52,18 @@ $result=$obj->GetTable($qry);
               {
                 ?>
                <a class="btn btn-info btn-sm" href="progress.php?rid=<?php echo $res['bid_id'];?>">Progress</a>
-               <?php
+               <?php 
               }
+              
+              elseif($res['bstatus']=='Reject')
+              {
+                ?>
+               <a class="btn btn-danger btn-sm">Rejected</a>
+               <?php
+} 
               else
               {
-                echo "Either Rejected or Still bidding is Active";
+                echo "Bidding is active";
               }
               ?>
             </td>

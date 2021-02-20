@@ -1,7 +1,7 @@
 <?php 
 //session_start();
 require_once('header.php'); 
-require_once("../ConnectionClass.php");
+require_once("../connectionclass.php");
 $obj=new ConnectionClass();
  $email=$_SESSION['email']; 
  $qryy3="select fid from free_reg where email='$email'";

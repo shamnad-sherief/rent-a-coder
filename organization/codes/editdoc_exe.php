@@ -29,7 +29,8 @@ $page_action=$_REQUEST['action'];
       $imgpath="../documentadd/docadd/";
       $img_path=str_replace("\\","/",$imgpath);    
      
-      $extension=end(explode(".",$file));
+      $tmp=explode('.', $file);
+      $extension=end($tmp);
       $files=time().".".$extension;
       try
       {

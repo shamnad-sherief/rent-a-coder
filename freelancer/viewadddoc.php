@@ -1,7 +1,7 @@
 <?php
 //session_start();
 require_once('header.php'); 
-require_once("../ConnectionClass.php");
+require_once("../connectionclass.php");
 $obj=new ConnectionClass();
 $jobrid=$_REQUEST['jid'];
 $qry="select * from task t inner join job_post j inner join org_reg o on t.job_id=j.job_id  and o.email=t.email where  t.job_id='$jobrid'";

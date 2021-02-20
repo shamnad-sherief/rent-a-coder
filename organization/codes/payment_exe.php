@@ -25,11 +25,12 @@ $amount=$_POST['pay_amount'];
 //echo $amount."<br>";
 $qry10="select amount from bank where card_no='$accno' ";
 $exe10=$obj->GetSingleData($qry10);
-$qry8="select * from bank where card_no='$accno' ";
+$qry8="select count(*) from bank where card_no='$accno' ";
 $exe8=$obj->GetSingleData($qry8);
+echo $exe8;
 if($exe8==0)
 {
-  echo $obj->alert("Not Exists","../bankdetails.php?job_id=".$jid);
+  //echo $obj->alert("Not Exists","../bankdetails.php?job_id=".$jid);
 }
 else
 {
