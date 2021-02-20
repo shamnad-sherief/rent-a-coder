@@ -27,7 +27,7 @@ else
 		require_once("Phpmailer/gmail.php");
 		$mail_code="Note your random number : ".$random;
 		sendmail($mail_code,"FORGOT PASSWORD",$email_id);
-		//echo $obj->alert("please check your mail","../entercode.php");
+		echo $obj->alert("please check your mail","../entercode.php");
 	}
 	else{
 		//echo "create table";

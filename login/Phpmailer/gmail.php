@@ -15,10 +15,11 @@ date_default_timezone_set('Etc/UTC');
 require 'PHPMailerAutoload.php';
 
 //Create a new PHPMailer instance
-$mail = new PHPMailer;
+$mail = new PHPMailer();
 
 //Tell PHPMailer to use SMTP
-$mail->isSMTP();
+$mail->IsSMTP();
+$mail->Host="Localhost";
 
 //Enable SMTP debugging
 // 0 = off (for production use)
@@ -46,7 +47,7 @@ $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication - use full email address for gmail
 //$mail->Username = "event805@gmail.com";
-$mail->Username = "myfaithprojects@gmail.com";
+$mail->Username = "event805@gmail.com";
 
 //Password to use for SMTP authentication
 //$mail->Password = "805event";
@@ -75,10 +76,14 @@ $mail->AltBody = 'This is a plain-text message body';
 //Attach an image file
 //$mail->addAttachment('images/phpmailer_mini.png');
 
+
+
 //send the message, check for errors
-if (!$mail->send()) {
+if (!$mail->send()); {
    // echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
+//send
+$mail->send();
    // echo "Message sent!";
 }
 }
